@@ -1,0 +1,45 @@
+package com.example.demo;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmployeeService {
+
+	public List<Employee> getAllEmployees() {
+		return Collections.singletonList(new Employee("1", "Andi"));
+	}
+
+	public Employee save(Employee employee ) {
+		  
+		return null;
+	}
+
+	public void createEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void updateEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void deleteEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void getEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	}

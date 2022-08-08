@@ -1,0 +1,13 @@
+package com.example.demo;
+
+import java.util.List;
+
+public class ReponseEntity {
+	
+	private boolean status;
+	private Employee employee;
+	private List<Employee> listOfEmp;
+	private String error;
+	
+
+}

@@ -1,0 +1,18 @@
+package com.example.demo;
+
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmployeeService {
+
+	public List<Employee> getAllEmployees() {
+		return Collections.singletonList(new Employee("1", "Andi"));
+	}
+
+	public Employee save(Employee employee ) {
+		return null;
+	}
+}

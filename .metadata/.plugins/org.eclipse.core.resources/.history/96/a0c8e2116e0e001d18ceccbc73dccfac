@@ -1,0 +1,22 @@
+package com.example.demo;
+
+public class ResponseEntity {
+	
+	private Boolean success;
+	private Employee employee;
+	public Boolean getSuccess() {
+		return success;
+	}
+	public void setSuccess(Boolean success) {
+		this.success = success;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
+	}
+	
+	
+
+}

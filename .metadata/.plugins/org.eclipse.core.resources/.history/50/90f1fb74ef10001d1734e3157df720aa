@@ -1,0 +1,48 @@
+package com.example.demo;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmployeeService {
+	
+	@Autowired
+	EmployeeRepository employeeRepository;
+
+	public List<Employee> getAllEmployees() {
+		return Collections.singletonList(new Employee("1", "Andi"));
+	}
+
+	public Employee save(Employee employee ) {
+		  
+		return employeeRepository.save(employee);
+	}
+
+
+	public Employee updateEmployee(Employee employee, String id) {
+		return employeeRepository.findById(id).map(e -> {
+	      employee.setName(employee.getName());
+	      return employeeRepository.save(employee);
+	    }).orElseGet(() -> {
+	    	employee.setId(id);
+	      return employeeRepository.save(employee);
+	    });}
+
+	public void deleteEmployee(Employee employee) {
+		employeeRepository.deleteById(id);
+	}
+
+	public void getEmployee(Employee employee) {
+		
+	}
+	
+	}

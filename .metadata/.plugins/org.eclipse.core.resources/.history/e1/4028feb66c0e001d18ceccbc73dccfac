@@ -1,0 +1,31 @@
+package com.example.demo;
+
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
+
+import reactor.core.publisher.Mono;
+
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Component;
+
+@Component
+public class SalaryService {
+
+
+	//@PreAuthorize("hasRole('ADMIN')")
+	public ResponseEntity getSalaryForEmployee(Employee employee) {
+		ResponseEntity entity=new ResponseEntity();
+		entity.setSuccess(true);
+		entity.setEmployee(employee);
+		return entity;
+	}
+
+	//@Secured({ "ROLE_HR" })
+	public Map<String,String> updateSalary(String employeeId, String newSalary) {
+	Employee emp =new Employee(employeeId,newSalary);
+	return getSalaryForEmployee(emp);
+	}
+
+}
