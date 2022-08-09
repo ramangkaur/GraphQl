@@ -1,21 +1,13 @@
 package com.example.demo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.Set;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+/**
+ * @author r.g.kaur
+ *
+ */
 @Service
 public class EmployeeService {
 
@@ -24,10 +16,10 @@ public class EmployeeService {
 
 	public List<Employee> getAllEmployees() {
 		ReponseEntity response = new  ReponseEntity();
-		List<Employee> emp = new ArrayList<>();
-		emp.add(new Employee(1, "raman"));
-		 //employeeRepository.findAll();
-		return emp;
+		Employee emp = new Employee(1, "raman");
+	    employeeRepository.save(emp);
+		return employeeRepository.findAll();
+		 
 	}
 
 	public Employee save(Employee employee ) {
@@ -46,6 +38,10 @@ public class EmployeeService {
 		});
 	}
 
+	/**
+	 * @param id
+	 * @return
+	 */
 	public String deleteEmployee(Integer id) {
 		try {
 			employeeRepository.deleteById(id);

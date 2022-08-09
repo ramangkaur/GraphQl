@@ -4,13 +4,13 @@ public class ResponseEntity {
 	
 	private Boolean success;
 	private Employee employee;
-	private SalaryInput salary;
+	private SalaryInput salaryObj;
 	
 	public SalaryInput getSalary() {
-		return salary;
+		return salaryObj;
 	}
 	public void setSalary(SalaryInput salary) {
-		this.salary = salary;
+		this.salaryObj = salaryObj;
 	}
 	public Boolean getSuccess() {
 		return success;

@@ -1,26 +1,25 @@
 package com.example.demo;
 
-import java.math.BigDecimal;
 
 public class SalaryInput {
 
-	private String employeeId;
+	private Integer employeeId;
 
-	private String newSalary;
+	private Integer newSalary;
 
-	public String getEmployeeId() {
+	public Integer getEmployeeId() {
 		return employeeId;
 	}
 
-	public void setEmployeeId(String employeeId) {
+	public void setEmployeeId(Integer employeeId) {
 		this.employeeId = employeeId;
 	}
 
-	public String getNewSalary() {
+	public Integer getNewSalary() {
 		return newSalary;
 	}
 
-	public void setNewSalary(String newSalary) {
+	public void setNewSalary(Integer newSalary) {
 		this.newSalary = newSalary;
 	}
 

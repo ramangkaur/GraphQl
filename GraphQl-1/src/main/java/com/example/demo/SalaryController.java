@@ -34,16 +34,14 @@ public class SalaryController {
 	}
 
 	@SchemaMapping
-	public ResponseEntity salary(SalaryInput employee) {
-		return this.salaryService.getSalaryForEmployee(employee);
+	public ResponseEntity salaryObj(Employee emp) {
+		return this.salaryService.getSalaryForEmployee(emp);
 	}
 
 	@MutationMapping
-	public ResponseEntity updateSalary(@Argument("input")SalaryInput salaryInput) {
-		String employeeId = salaryInput.getEmployeeId();
-		String salary = salaryInput.getNewSalary();
-		//System.out.println("emp"+employeeId);
-		//System.out.println("ssss"+salary);
+	public ResponseEntity updateSalary(@Argument("input") SalaryInput salaryInput) {
+		Integer employeeId = salaryInput.getEmployeeId();
+		Integer salary = salaryInput.getNewSalary();
 		return this.salaryService.updateSalary(employeeId, salary);
 	}
 

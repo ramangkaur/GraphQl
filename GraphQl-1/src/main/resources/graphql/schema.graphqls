@@ -7,20 +7,19 @@ type Mutation {
 type Employee {
     id: ID!
     name: String!
-    # restricted
     salary: String!
 }
 
 input UpdateSalaryInput {
     employeeId: ID!
-    newSalary: String!
+    newSalary: Int!
 }
 type UpdateSalaryPayload {
     success: Boolean
     employee: Employee
-    salary: SalaryInput
+    salaryObj: SalaryInput
 }
 type SalaryInput{
-  employeeId: String!
+  employeeId: Int!
   newSalary :String!
 }
