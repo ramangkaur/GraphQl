@@ -1,5 +1,0 @@
-Server/
-RemoteSystemsTempFiles/
-demo/
-.recommenders/
-.metadata/
